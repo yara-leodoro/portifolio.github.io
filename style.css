@@ -23,14 +23,14 @@ body{
 }
 
 .card-header{
-    background: #2c3a47;
+    background: #778899;
     padding: 60px 40px;
 }
 
 .pic{
     display: inline-block;
     padding: 8px;
-    background: linear-gradient(130deg, #74b9ff, #e66767);
+    background: linear-gradient(130deg, #74b9ff, #9400D3);
     margin: auto;
     border-radius: 50%;
     background-size: 200% 200%;
@@ -38,8 +38,8 @@ body{
 }
 
 .pic img{
-    display: block;
 
+    display: block;
     width: 100px;
     height: 100px;
     border-radius: 50%;
@@ -70,7 +70,7 @@ body{
 
 .desc{
     font-size: 18px;
-    color: #e66767;
+    color: #9400D3;
 }
 
 .sm{
@@ -87,7 +87,7 @@ body{
 }
 
 .sm a:hover{
-    color: #e66767;
+    color: #9400D3;
 }
 
 
