@@ -1,26 +1,174 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>portifolio</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"/>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfólio | Iara Leodoro</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
     <div class="profile-card">
         <div class="card-header">
-            <div class="pic">
-                <img src="icone.jpg" alt="">
+            <div class="pic" onclick="togglePhoto()">
+                <img id="profile-photo" src="img/profile.jpeg" alt="Foto de Iara Leodoro">
             </div>
-            <div class="name">Iara Leodoro </div>
-            <div class="desc">Developer back-end</div>
+            <div class="name">Iara Leodoro</div>
+            <div class="desc"> <span id="typewriter-text"></span><span class="cursor">|</span></div>
             <div class="sm">
-            <a href="https://www.facebook.com/iara.leodoro.50/" class="fab fa-facebook-f"></a>
-            <a href="https://github.com/yara-leodoro" class="fab fa-github"></a>
-            <a href="https://twitter.com/LeodoroYara?s=08" class="fab fa-twitter"></a>
-            <a href="https://www.linkedin.com/in/iara-leodoro-82b2a114a" class="fab fa-linkedin"></a>
+                <a href="https://github.com/yara-leodoro" class="fab fa-github"></a>
+                <a href="https://www.linkedin.com/in/iara-leodoro-82b2a114a" class="fab fa-linkedin"></a>
+            </div>
         </div>
+    </div>
+    <script src="script.js"></script>
+
+<!-- Seção Sobre Mim -->
+<section class="about-section">
+  <h2 class="section-title">Sobre Mim</h2>
+  <div class="about-content">
+    
+    <div class="about-text">
+      <p>Oi! Eu sou a <strong class="gradient-fixed">Iara Leodoro</strong>, tenho <strong class="gradient-fixed">23 anos</strong> e sou uma apaixonada por <strong class="gradient-fixed">tecnologia</strong> (e café também, confesso ☕). Trabalho como <strong class="gradient-fixed">Engenheira de Software</strong>, focada em <strong class="gradient-fixed">Visão Computacional</strong> e <strong class="gradient-fixed">Inteligência Artificial</strong> 🤖.</p>
+      
+      <p>Com mais de <strong class="gradient-fixed">4 anos de experiência</strong>, já liderei projetos incríveis envolvendo <strong class="gradient-fixed">detecção de objetos</strong>, <strong class="gradient-fixed">reconhecimento facial</strong> 🧠 e <strong class="gradient-fixed">leitura de placas</strong> 🚘 — tudo isso para tornar o mundo um lugar mais seguro e inteligente!</p>
+      
+      <p>Atualmente lidero um time de devs 💻 e uso tecnologias como <strong class="gradient-fixed">C++</strong>, <strong class="gradient-fixed">Python</strong>, <strong class="gradient-fixed">OpenCV</strong> e <strong class="gradient-fixed">YOLO</strong>. Amo transformar câmeras comuns em sensores inteligentes, criando soluções reais que impactam o dia a dia das pessoas 📸✨.</p>
+      
+      <p>Ah, e fora das telas, adoro <strong class="gradient-fixed">tocar ukulele</strong> 🎶, explorar <strong class="gradient-fixed">novos desafios técnicos</strong> 🧪 e sou apaixonada pela <strong class="gradient-fixed">vida fitness</strong> 💪: faço <strong class="gradient-fixed">academia</strong> 🏋️, <strong class="gradient-fixed">natação</strong> 🏊 e <strong class="gradient-fixed">jiu-jitsu</strong> 🥋.</p>
+    </div>
+    <div class="emoji-orbit-wrapper">
+      <img src="img/chave-icons.png" alt="Memoji com chaves" class="emoji-central float">
+    
+      <img src="img/musculacao.png" alt="Musculação" class="emoji orbit orbit1">
+      <img src="img/musica.png" alt="Música" class="emoji orbit orbit2">
+      <img src="img/natacao.png" alt="Natação" class="emoji orbit orbit3">
+      <img src="img/python.png" alt="Python" class="emoji orbit orbit4">
+      <img src="img/kimono.png" alt="Jiu-jitsu" class="emoji orbit orbit5">
+    </div>
+</section>
+
+  <!-- Seção de projetos estilo card -->
+  <section class="projects-section">
+    <h2 class="projects-title section-title">Projetos</h2>
+    <div class="projects-grid">
+      <div class="project-card" style="background-image: url('img/6793733.png');">
+        <h3>YOLOv8 Pedra Papel Tesoura</h3>
+        <p>Reconhecimento de gestos com YOLOv8.</p>
+        <a href="https://github.com/yara-leodoro/Yolov8-pedra-papel-tesoura" target="_blank"><i class="fas fa-link"></i></a>
+      </div>
+      <div class="project-card" style="background-image: url('img/1315214-200.png');">
+        <h3>Binary Classification</h3>
+        <p>Classificação binária com TensorFlow.</p>
+        <a href="https://github.com/yara-leodoro/binary_classification_tensorFlow" target="_blank"><i class="fas fa-link"></i></a>
+      </div>
+      <div class="project-card" style="background-image: url('img/Face Id.png');">
+        <h3>Face Detection</h3>
+        <p>Detecção facial com Python + OpenCV.</p>
+        <a href="https://github.com/yara-leodoro/python-face-detect" target="_blank"><i class="fas fa-link"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="skills-section">
+    <h2 class="skills-title section-title">Skills</h2>
+  
+    <!-- Envolve a formação + emojis -->
+    <div class="education-wrapper">
+  
+      <!-- Caixa escura com blur -->
+      <div class="education-section">
+        <h3 class="education-header">FORMAÇÃO ACADÊMICA</h3>
+
+        <!-- Memojis -->
+        <img src="img/iara-ideia.webp" class="edu-emoji emoji-top" alt="Emoji ideia">
+        <img src="img/iara-pc.webp" class="edu-emoji emoji-side" alt="Emoji notebook">
+  
+        <div class="edu-entry">
+          <span class="edu-dot green"></span>
+          <div class="edu-content">
+            <p><strong class="edu-title">Graduação em: Análise e Desenvolvimento de Sistemas</strong></p>
+            <p>Fatec Garça</p>
+            <p><span class="edu-highlight">Modalidade: Tecnólogo 2020 - 2023</span></p>
+          </div>
+        </div>
+  
+        <div class="edu-entry">
+          <span class="edu-dot green"></span>
+          <div class="edu-content">
+            <p><strong class="edu-title">Pós Graduação em: Ciência de Dados e Inteligência Artificial</strong></p>
+            <p>Unimar</p>
+            <p><span class="edu-highlight">Modalidade: Especialização 2024 - 2025</span></p>
+          </div>
+        </div>
+  
+        <div class="edu-entry">
+          <span class="edu-dot blue"></span>
+          <div class="edu-content">
+            <p><strong class="edu-title">ALURA: Formação em C++ e Python</strong></p>
+            <p>Formação completa voltada para desenvolvimento com <span class="cpp">C++</span> e <span class="python">Python</span>, abordando fundamentos da linguagem, orientação a objetos, estruturas de dados, projetos práticos e aplicações em ciência de dados.</p>
+            <p><span class="edu-highlight">Modalidade: Formação Online 2020</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Ícones animados -->
+    <div class="skills-categorized">
+
+      <div class="skill-category">
+        <h1 class="section-title">Linguagens & IDEs</h1>
+        <div class="skills-icons">
+          <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="Python" title="Python">
+          <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/csharp/csharp-original.svg" alt="C#" title="C#">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++" title="C++">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original.svg" alt="Jupyter" title="Jupyter">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VSCode" title="VSCode">
+        </div>
+      </div>
+    
+      <div class="skill-category">
+        <h1 class="section-title">Frameworks & Bibliotecas</h1>
+        <div class="skills-icons">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg" alt="PyTorch" title="PyTorch">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" alt="TensorFlow" title="TensorFlow">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/opencv/opencv-original.svg" alt="OpenCV" title="OpenCV">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg" alt="Flask" title="Flask">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" alt="Pandas" title="Pandas">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg" alt="NumPy" title="NumPy">
+        </div>
+      </div>
+    
+      <div class="skill-category">
+        <h1 class="section-title">DevOps & Cloud</h3>
+        <div class="skills-icons">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker" title="Docker">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="AWS">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" title="Git">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" title="GitHub">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/gitlab/gitlab-original.svg" alt="GitLab" title="GitLab">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/anaconda/anaconda-original.svg" alt="Anaconda" title="Anaconda">
+        </div>
+      </div>
+    
+    </div>
+    
+    <!-- Botão de CV -->
+    <div class="cv-dropdown">
+      <button class="cv-btn"><i class="fas fa-file-download"></i> Baixar CV</button>
+      <div class="cv-options">
+        <a href="cv/cv_iara_pt.pdf" download>
+          <img src="https://hatscripts.github.io/circle-flags/flags/br.svg" alt="PT"> Currículo (Português)
+        </a>
+        <a href="cv/cv_iara_en.pdf" download>
+          <img src="https://hatscripts.github.io/circle-flags/flags/us.svg" alt="EN"> Resume (English)
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Botão de volta ao top -->
+  <button id="topBtn" onclick="scrollToTop()">🔝</button>
+
 </body>
 </html>
