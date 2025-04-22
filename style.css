@@ -270,11 +270,20 @@ body {
 }
 
 .skills-categorized {
+  background: rgba(0, 0, 0, 0.5); 
+  backdrop-filter: blur(6px);
+  padding: 30px;
+  border-radius: 16px;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  max-width: 800px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   gap: 40px;
-  margin-top: 40px;
+  margin-top: 50px;
 }
+
 
 .skill-category-title {
   color: white;
@@ -386,7 +395,8 @@ body {
   background: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(6px);
   border-radius: 16px;
-  margin-top: 40px;
+  margin-top: 10px;
+  margin-bottom: 30px;
   text-align: center;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
 }
@@ -451,25 +461,38 @@ body {
 
 /* formação */
 .education-wrapper {
-  position: relative;
-  width: 100%;
   display: flex;
   justify-content: center;
   margin-top: 50px;
+  padding: 0 20px;
 }
+
+.education-background {
+  width: 100%;
+  padding: 40px 20px;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border-radius: 16px;
+  margin-top: 50px;       /* reduzido para aproximar dos projetos */
+  margin-bottom: 10px;    /* reduzido para aproximar das skills */
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+
 
 .education-section {
-  position: relative;  /* MUITO IMPORTANTE */
-  background: rgba(0, 0, 0, 0.4);
-  padding: 30px;
+  background: rgba(0, 0, 0, 0.2); /* transparência leve para blur aparecer */
+  backdrop-filter: blur(14px);   /* efeito blur */
+  -webkit-backdrop-filter: blur(14px); /* para suporte no Safari */
   border-radius: 16px;
-  backdrop-filter: blur(6px);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  padding: 30px;
   max-width: 800px;
-  z-index: 1;
   margin: 0 auto;
+  z-index: 1;
+  text-align: left;
 }
-
 
 .education-header {
   font-size: 24px;

@@ -35,18 +35,24 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // === BOTÃO VOLTAR AO TOPO ===
-  window.onscroll = () => {
-    const btn = document.getElementById('topBtn');
-    btn.style.display = window.scrollY > 300 ? 'block' : 'none';
-  };
+  const topBtn = document.getElementById('topBtn');
+  
+  window.addEventListener('scroll', () => {
+    if (!topBtn) return;
+    if (window.scrollY > 300) {
+      topBtn.classList.add('show');
+    } else {
+      topBtn.classList.remove('show');
+    }
+  });
 
-  window.scrollToTop = function () {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
+window.scrollToTop = function () {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+};
 
   // === ANIMAÇÃO DE DIGITAÇÃO ===
   const textElement = document.getElementById('typewriter-text');
-  const words = ['Especialista em MLOps', 'Developer Back-end'];
+  const words = ['Especialista em MLOps', 'Back-end Developer'];
   let wordIndex = 0;
   let charIndex = 0;
   let typing = true;
