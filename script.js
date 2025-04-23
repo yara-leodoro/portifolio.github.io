@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   // === TROCA DE FOTO + ANIMAÇÃO ===
   let photoIndex = 0;
-  const photos = ['img/profile.jpeg', 'img/iara-piscada.webp'];
+  const photos = ['img/IMG_1119.JPEG', 'img/iara-piscada.webp'];
   const photo = document.getElementById('profile-photo');
 
   // troca manual ao clicar
@@ -87,14 +87,14 @@ window.scrollToTop = function () {
   const navLinks = document.querySelectorAll(".nav-link");
 
   window.addEventListener("scroll", () => {
-    let scrollY = window.scrollY;
+    const scrollY = window.scrollY;
 
     sections.forEach(section => {
       const sectionTop = section.offsetTop - 120;
       const sectionHeight = section.offsetHeight;
       const sectionId = section.getAttribute("id");
 
-      if (scrollY >= sectionTop && scrollY <= sectionTop + sectionHeight) {
+      if (scrollY >= sectionTop - 120 && scrollY < sectionTop + sectionHeight - 120) {
         navLinks.forEach(link => {
           link.classList.remove("active");
           if (link.getAttribute("href") === `#${sectionId}`) {
@@ -104,4 +104,21 @@ window.scrollToTop = function () {
       }
     });
   });
+
+  // === ROLAGEM SUAVE PARA LINKS ===
+  document.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      const targetId = this.getAttribute('href').substring(1);
+      const section = document.getElementById(targetId);
+    
+      if (section) {
+        window.scrollTo({
+          top: section.offsetTop - 120,
+          behavior: 'smooth'
+        });
+      }
+    });
+  });
+
 });

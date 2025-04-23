@@ -14,7 +14,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  padding-top: 50px;
+  padding-top: 120px;
   color: white;
 }
 
@@ -25,9 +25,23 @@ body {
   overflow: hidden;
   background: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(8px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
   margin-bottom: 40px;
   padding: 40px 20px 20px;
+  box-shadow: 0 0 30px  rgba(148, 0, 211, 0.85); 
+  transition: box-shadow 0.3s ease;
+
+}
+
+.profile-card:hover {
+  box-shadow: 0 0 60px rgba(148, 0, 211, 0.85);
+}
+
+#profile-photo {
+  width: 180px; /* ou ajuste para o tamanho desejado */
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%; /* Torna a imagem perfeitamente redonda */
+  box-shadow: 0 0 20px rgba(188, 111, 241, 0.6);
 }
 
 .card-header {
@@ -173,31 +187,33 @@ body {
 
 .projects-grid {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
   gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .project-card {
+  flex: 1 1 30%;
+  aspect-ratio: 1 / 1; /* Mais quadrado */
   background-size: cover;
   background-position: center;
-  width: 250px;
-  height: 350px;
-  color: white;
   border-radius: 20px;
   padding: 20px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  text-align: center;
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+  color: white;
   transition: transform 0.3s ease;
-  backdrop-filter: blur(4px);
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 25px rgba(148, 0, 211, 0.5);
+  position: relative;
+  min-width: 280px;
+  max-width: 400px;
 }
 
 .project-card:hover {
-  transform: scale(1.05);
+  transform: translateY(-9px);
+  box-shadow: 0 0 35px rgba(148, 0, 211, 0.7);
 }
 
 .project-card h3 {
@@ -230,10 +246,19 @@ body {
   color: white;
 }
 
+.project-icon {
+  width: 390px;
+  height: auto;
+  margin: 10px auto;
+  display: block;
+  filter: brightness(0); /* deixa a imagem preta */
+}
+
 /*Skills */
 .skills-section {
   width: 100%;
   padding: 50px 20px;
+  padding-top: 10px;
   background: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(6px);
   border-radius: 16px;
@@ -717,47 +742,39 @@ body {
   transform: scale(1.1);
 }
 
-/* barra de navegação */
+/* navbar*/
 
 .navbar {
   position: fixed;
   top: 0;
+  left: 0;
   width: 100%;
-  z-index: 1000;
   padding: 15px 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  backdrop-filter: blur(12px);
-  background: rgba(0, 0, 0, 0.35);
-  box-shadow: 0 4px 20px rgba(188, 111, 241, 0.2);
-  transition: background 0.3s ease, box-shadow 0.3s ease;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  box-shadow: 0 4px 15px rgba(148, 0, 211, 0.4)
 }
 
-/* Logo com destaque */
 .navbar .logo {
   font-size: 1.5rem;
   font-weight: bold;
   font-family: 'Courier New', monospace;
+  color: white;
 }
 
-.navbar .logo span {
-  color: #bc6ff1; /* Roxo para nome */
+.navbar .logo .name {
+  color: #bc6ff1; /* Roxinho */
 }
 
-.navbar .logo::before,
-.navbar .logo::after {
-  color: white; /* "<" e ">" em branco */
-  content: "<";
-  font-weight: bold;
+.navbar .bracket {
+  color: white;
 }
 
-.navbar .logo::after {
-  content: "/>";
-  color: rgba(255, 255, 255, 0.4); /* barra clara translúcida */
-}
-
-/* Menu */
 .navbar .nav-menu {
   display: flex;
   gap: 30px;
@@ -769,17 +786,14 @@ body {
   font-size: 1rem;
   position: relative;
   transition: color 0.3s ease;
+  text-decoration: none;
 }
 
-.navbar .nav-link:hover {
-  color: #bc6ff1;
-}
-
+.navbar .nav-link:hover,
 .navbar .nav-link.active {
   color: #bc6ff1;
 }
 
-/* Sublinhar a ativa */
 .navbar .nav-link.active::after {
   content: '';
   position: absolute;
@@ -789,5 +803,17 @@ body {
   height: 2px;
   background: #bc6ff1;
   border-radius: 2px;
+}
+
+/* animação logo navbar */
+
+.navbar .logo .name {
+  color: #bc6ff1;
+  animation: glow 2.5s ease-in-out infinite;
+}
+
+@keyframes glow {
+  0%, 100% { text-shadow: 0 0 6px #bc6ff1, 0 0 12px #9400d3; }
+  50% { text-shadow: 0 0 16px #bc6ff1, 0 0 28px #9400d3; }
 }
 

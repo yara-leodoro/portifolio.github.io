@@ -8,10 +8,23 @@
   <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
+    <!-- ✅ NAVBAR COM <DevIara/> -->
+    <nav class="navbar">
+    <div class="logo">
+      <span class="bracket">&lt;</span><span class="name">DevIara</span><span class="bracket">/&gt;</span>
+    </div>
+    <div class="nav-menu">
+      <a href="#about" class="nav-link active">Sobre Mim</a>
+      <a href="#projects" class="nav-link">Projetos</a>
+      <a href="#education" class="nav-link">Formação</a>
+      <a href="#skills" class="nav-link">Skills</a>
+    </div>
+  </nav>
+
     <div class="profile-card">
         <div class="card-header">
             <div class="pic" onclick="togglePhoto()">
-                <img id="profile-photo" src="img/profile.jpeg" alt="Foto de Iara Leodoro">
+                <img id="profile-photo" src="img/IMG_1119.JPEG" alt="Foto de Iara Leodoro">
             </div>
             <div class="name">Iara Leodoro</div>
             <div class="desc"> <span id="typewriter-text"></span><span class="cursor">|</span></div>
@@ -25,7 +38,7 @@
     <script src="script.js"></script>
 
 <!-- Seção Sobre Mim -->
-<section class="about-section">
+<section class="about-section" id="about">
   <h2 class="section-title">Sobre Mim</h2>
   <div class="about-content">
     <div class="about-text">
@@ -45,7 +58,7 @@
 </section>
 
 <!-- Seção de projetos -->
-<section class="projects-section">
+<section class="projects-section" id="projects">
   <h2 class="projects-title section-title">Projetos</h2>
   <div class="projects-grid">
     <div class="project-card" style="background-image: url('img/6793733.png');">
@@ -58,16 +71,20 @@
       <p>Classificação binária com TensorFlow.</p>
       <a href="https://github.com/yara-leodoro/binary_classification_tensorFlow" target="_blank"><i class="fas fa-link"></i></a>
     </div>
-    <div class="project-card" style="background-image: url('img/Face Id.png');">
+    <div class="project-card">
+      <img src="img/Face Id.png" class="project-icon" alt="Face Icon" />
       <h3>Face Detection</h3>
       <p>Detecção facial com Python + OpenCV.</p>
-      <a href="https://github.com/yara-leodoro/python-face-detect" target="_blank"><i class="fas fa-link"></i></a>
+      <a href="https://github.com/yara-leodoro/python-face-detect" target="_blank">
+        <i class="fas fa-link"></i>
+      </a>
     </div>
+    
   </div>
 </section>
 
 <!-- Formação acadêmica -->
-<section class="education-background">
+<section class="education-background" id="education">
   <div class="education-wrapper">
     <div class="education-section">
       <h3 class="education-header">FORMAÇÃO ACADÊMICA</h3>
@@ -102,7 +119,7 @@
 </section>
 
 <!-- Skills -->
-<section class="skills-section">
+<section class="skills-section" id="skills">
   <h2 class="skills-title section-title">Skills</h2>
   <div class="skills-categorized">
     <div class="skill-category">
