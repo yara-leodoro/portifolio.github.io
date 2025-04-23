@@ -817,3 +817,27 @@ body {
   50% { text-shadow: 0 0 16px #bc6ff1, 0 0 28px #9400d3; }
 }
 
+/* footer */
+
+.signature {
+  text-align: center;
+  padding: 20px;
+  margin-top: 60px;
+  font-size: 0.9rem;
+  color: #ccc;
+  background: transparent;
+  font-family: 'Courier New', monospace;
+}
+
+.signature span {
+  color: #bc6ff1;
+  font-weight: bold;
+}
+
+.signature span {
+  color: #bc6ff1;
+  font-weight: bold;
+  text-shadow: 0 0 6px #bc6ff1, 0 0 12px #9400d3;
+}
+
+
